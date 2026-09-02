@@ -1,0 +1,6 @@
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://www.packyapi.ai",
+    "ANTHROPIC_AUTH_TOKEN": "sk-POmhbDqY11mo5U1pAWZFimf47yGirGArtmV5VjunEBGyiR35"
+  }
+}

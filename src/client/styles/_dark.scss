@@ -1,0 +1,333 @@
+@use 'variables' as *;
+@use "sass:color";
+$dark-sidebar: #333;
+$dark-editor: #3f3f3f;
+
+.dark {
+  a {
+    color: color.adjust($primary, $lightness:8%);
+    &:hover {
+      color: color.adjust($primary, $lightness:15%);
+    }
+    &.button {
+      color: white;
+    }
+  }
+
+  .loading {
+    background: #222;
+  }
+
+  .app-sidebar {
+    border-right: 1px solid color.adjust($dark-sidebar,$lightness: -8%);
+  }
+
+  .note-menu-bar {
+    background: color.adjust($dark-sidebar,$lightness: -6%);
+    border-color: color.adjust($dark-sidebar,$lightness: -12%);
+
+    button {
+      color: rgba(255, 255, 255, 0.5);
+      &.trash {
+        &:hover {
+          color: color.adjust($error, $lightness:-8%);
+        }
+      }
+      &:hover {
+        color: rgba(255, 255, 255, 0.7);
+        background: color.adjust($dark-sidebar,$lightness: -10%);
+      }
+    }
+  }
+
+  .note-sidebar {
+    background: color.adjust($dark-sidebar,$lightness: -6%);
+    border-right: 1px solid color.adjust($dark-sidebar,$lightness: -8%);
+
+    .note-sidebar-header {
+      color: $light-font-color;
+      background: color.adjust($dark-sidebar,$lightness: 4%);
+      border-color: color.adjust($dark-sidebar,$lightness: -12%);
+
+      input {
+        background: color.adjust($dark-sidebar,$lightness: 5%);
+        color: $light-font-color;
+        border: 1px solid color.adjust($dark-sidebar,$lightness: -10%);
+      }
+    }
+
+    .list-button {
+      color: $light-font-color;
+      background: color.adjust($dark-sidebar,$lightness: -8%);
+      border: 1px solid color.adjust($dark-sidebar,$lightness: -1%);
+
+      &:hover,
+      &:focus {
+        color: white;
+        background: color.adjust($variable, $lightness:-10%);
+      }
+    }
+
+    .note-list {
+      .note-list-each {
+        border-bottom: 1px solid color.adjust($dark-sidebar,$lightness: -0%);
+        color: color.adjust($light-font-color, $lightness:10%);
+
+        &.active:hover .note-options {
+          color: white;
+        }
+
+        .note-category {
+          color: rgba(255, 255, 255, 0.3);
+        }
+
+        &:hover {
+          background: $dark-sidebar;
+          .note-options {
+            color: #888;
+          }
+        }
+
+        &.selected {
+          background: $primary;
+          color: white;
+          border-bottom: 1px solid color.adjust($primary, $lightness:-5%);
+
+          &:hover {
+            .note-options {
+              color: white;
+            }
+          }
+
+          .note-options {
+            &.active {
+              color: white;
+            }
+          }
+          .note-category {
+            color: rgba(255, 255, 255, 0.7);
+          }
+        }
+
+        .note-options {
+          &.active {
+            color: #888;
+          }
+        }
+      }
+    }
+  }
+
+  .options-context-menu {
+    border: 1px solid color.adjust($dark-sidebar,$lightness: -8%);
+    background: $app-sidebar-color;
+    color: $light-font-color;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.25);
+
+    svg {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    select {
+      background: color.adjust($dark-sidebar,$lightness: 8%);
+      color: $light-font-color;
+      border: 1px solid color.adjust($dark-sidebar,$lightness: -5%);
+    }
+  }
+
+  .options-nav {
+    .nav-item {
+      &:hover {
+        color: white;
+        background: color.adjust($app-sidebar-color, $lightness:8%);
+
+        svg {
+          color: rgba(255, 255, 255, 0.8);
+        }
+      }
+      &.delete-option {
+        &:hover {
+          background: color.adjust($error,$lightness:-10%);
+          color: white;
+        }
+      }
+    }
+  }
+
+  .empty-editor {
+    background: $dark-editor;
+    color: $light-font-color;
+  }
+
+  .editor .CodeMirror-activeline-background {
+    background: #222 !important;
+  }
+
+  .previewer {
+    background: color.adjust($dark-editor, $lightness:-5%);
+    color: $light-font-color;
+
+    a {
+      color: $tag;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: $attribute;
+    }
+
+    table,
+    thead th,
+    tfoot th,
+    td {
+      border-color: color.adjust($dark-editor, $lightness:-20%);
+    }
+
+    code {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid $dark-editor;
+    }
+
+    pre {
+      background: color.adjust($dark-editor, $lightness:-10%);
+      border: 1px solid $dark-editor;
+
+      code {
+        color: $code-font-color;
+        background: transparent;
+        border-width: 0;
+      }
+    }
+
+    hr {
+      height: 0;
+      border: 0;
+      border-top: 2px solid color.adjust($dark-editor, $lightness:-5%);
+    }
+
+    blockquote {
+      border-color: color.adjust($dark-editor, $lightness:-10%);
+    }
+  }
+
+  .preview-button {
+    background: $app-sidebar-color;
+    color: #ccc;
+
+    &:hover {
+      background: color.adjust($app-sidebar-color,$lightness: -5%);
+    }
+  }
+
+  .settings-modal {
+    background: $dark-sidebar;
+    color: $light-font-color;
+    .settings-modal-header {
+      border-color: color.adjust($dark-sidebar,$lightness: -5%);
+    }
+    .subtitle {
+      color: color.adjust($light-font-color, $lightness:-20%);
+    }
+    .settings-option {
+      border-color: color.adjust($dark-sidebar,$lightness: -5%);
+      h3 {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .description {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    .close-button {
+      &:hover,
+      &:active {
+        background: color.adjust($dark-sidebar,$lightness: -5%);
+      }
+    }
+
+    select {
+      background: color.adjust($dark-sidebar,$lightness: 8%);
+      color: $light-font-color;
+      border: 1px solid color.adjust($dark-sidebar,$lightness: -5%);
+
+      &:active &:focus {
+        border: 1px solid color.adjust($primary, $lightness:-20%);
+        box-shadow: 0 0 0.2rem color.adjust($primary, $lightness:-20%);
+      }
+    }
+  }
+
+  kbd {
+    background: color.adjust($dark-sidebar,$lightness: -5%);
+    border: 1px solid color.adjust($dark-sidebar,$lightness: -10%);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 0 2px #222 inset;
+    color: color.adjust($light-font-color, $lightness:-10%);
+    text-shadow: 0 1px 0 #000;
+  }
+
+  .cache {
+    border: 1px solid black;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: $app-sidebar-color;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: color.adjust($app-sidebar-color, $lightness:8%);
+    border-radius: 0;
+  }
+  .Resizer {
+    opacity: 1;
+  }
+
+  .uuid-menu-bar {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .last-synced {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .tab-list {
+    border-color: color.adjust($dark-sidebar,$lightness: -10%);
+  }
+
+  .tabs {
+    p {
+      color: rgba(255, 255, 255, 0.7);
+    }
+    h3 {
+      color: white;
+    }
+  }
+
+  .tab {
+    svg {
+      color: rgba(255, 255, 255, 0.4);
+    }
+    &.active {
+      background: color.adjust($dark-sidebar,$lightness: -6%) !important;
+      color: white;
+      svg {
+        color: $primary !important;
+      }
+    }
+    &:hover {
+      background: color.adjust($dark-sidebar,$lightness: 6%);
+      color: white;
+      svg {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+
+  .slider {
+    background-color: color.adjust($dark-sidebar,$lightness: -10%);
+  }
+}

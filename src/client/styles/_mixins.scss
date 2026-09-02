@@ -1,0 +1,12 @@
+@use 'variables' as *;
+@mixin small-breakpoint {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin large-breakpoint {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}

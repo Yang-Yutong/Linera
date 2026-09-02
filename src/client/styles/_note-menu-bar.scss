@@ -1,0 +1,66 @@
+
+@use 'variables' as *;
+@use "sass:color";
+.note-menu-bar {
+  height: 39px;
+  border-top: 1px solid color.adjust($note-sidebar-color,$lightness: -5%);
+  background: $note-sidebar-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+
+  nav {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    align-self: stretch;
+  }
+
+  .uuid-menu-bar {
+    font-size: 0.7rem;
+    padding: 0 0.5rem;
+    align-self: center;
+  }
+
+  .last-synced {
+    font-size: 0.7rem;
+    padding: 0 0.5rem;
+    align-self: center;
+  }
+
+  .note-menu-bar-button {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: color.adjust($font-color, $lightness:15%);
+    padding: 0 0.75rem;
+    margin: 0;
+    &.trash {
+      &:hover {
+        color: color.adjust($error, $lightness:20%);
+      }
+    }
+    &:hover {
+      color: $font-color;
+      background: color.adjust($note-sidebar-color,$lightness: 5%);
+    }
+    &:active svg {
+      transform: scale(1.1);
+    }
+    &.uuid {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .uuid-copied-text {
+    padding-left: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 400;
+  }
+}
