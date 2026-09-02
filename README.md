@@ -16,7 +16,7 @@
 
 <p align="center">A web-based notes app for developers. (Demo only)</p>
 
-![Screenshot](./assets/takenote-light.png)
+![Screenshot](./assets/linera-light.png)
 
 ## Features
 
@@ -48,11 +48,11 @@ Hidden within the code is an alternate version that contain a Node/Express serve
 
 However, I'm leaving the code available so you can feel free to host your own TakeNote instance or study the code for learning purposes. I do not provide support or guidance for these purposes.
 
-TakeNote was created with TypeScript, React, Redux, Node, Express, Codemirror, Webpack, Jest, Cypress, Feather Icons, ESLint, and Mousetrap, among other awesome open-source software.
+Linera was created with TypeScript, React, Redux, Node, Express, Codemirror, Webpack, Jest, Cypress, Feather Icons, ESLint, and Mousetrap, among other awesome open-source software.
 
 ## Reviews
 
-> _"The value of creation lies in whether you are willing to keep using it."_ — Yang Yutong
+> _"The value of creation lies in whether you are willing to keep using it."_ — Yang-Yutong
 
 ## Demo Development
 
@@ -74,7 +74,7 @@ npm run client
 
 ### Pre-Installation
 
-Before working on TakeNote locally, you must create a GitHub OAuth app for development.
+Before working on Linera locally, you must create a GitHub OAuth app for development.
 
 Go to your GitHub profile settings, and click on **Developer Settings**.
 
@@ -184,7 +184,7 @@ Thanks goes to these wonderful people:
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/Yang-Yutong"><img src="https://avatars.githubusercontent.com/u/181755792?v=4&size=64" width="50px;" alt=""/><br /><sub><b>Joseph Perez</b></sub></a><br /><a href="https://github.com/Yang-Yutong/linera/commits?author=Yang-Yutong" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Yang-Yutong"><img src="https://avatars.githubusercontent.com/u/181755792?v=4&size=64" width="50px;" alt=""/><br /><sub><b>Yang-Yutong</b></sub></a><br /><a href="https://github.com/Yang-Yutong/linera/commits?author=Yang-Yutong" title="Code">💻</a></td>
   </tr>
 
 </table>
